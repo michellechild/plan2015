@@ -1,0 +1,72 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container{
+  max-width: 1000px;
+  width:85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@mixin div-bg {
+	width: 100%;
+	padding: 60px 0;
+}
+
+@mixin h1-font ($color) {
+	font-family: "le-havre-rounded", helvetica, sans-serif;
+	line-height: 1.6;
+	font-size: 8em;
+	font-weight: 200;
+	font-style: normal;
+	color: $color;
+	text-align: center;
+}
+
+@mixin h2-font ($color){
+	font-family: "le-havre-rounded", helvetica, sans-serif;
+	line-height: 1.6;
+	font-size: 4em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 200;
+	font-style: normal;
+	color: $color;
+	text-align: center;
+}
+
+@mixin h3-font($color){
+	font-family: "museo-sans", helvetica, sans-serif;
+	line-height: 1.6;
+	font-size: 4em;
+	font-weight: 500;
+	font-style: normal;
+	color: $color;
+	text-align: center;
+}
+
+@mixin h4-font($color){
+	font-family: "museo-sans", helvetica, sans-serif;
+	line-height: 1.6;
+	font-size: 3em;
+	font-weight: 300;
+	font-style: normal;
+	color: $color;
+	text-align: center;
+}
+
+@mixin li-font($color){
+	font-family: "museo-sans", helvetica, sans-serif;
+	line-height: 1.6;
+	font-size: 1.5em;
+	font-weight: 300;
+	font-style: normal;
+	color: $color;
+	text-align: center;
+}
