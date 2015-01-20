@@ -1,23 +1,161 @@
-/*
-Errno::ENOENT: No such file or directory - stylesheets/style.scss
-
-Backtrace:
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:481:in `read'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:481:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:293:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin.rb:108:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:370:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:50:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - stylesheets/style.scss"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.container {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+/*Typography*/
+h1 {
+  font-family: "le-havre-rounded", helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 8em;
+  font-weight: 200;
+  font-style: normal;
+  color: #000;
+  text-align: center; }
+
+h2 {
+  font-family: "le-havre-rounded", helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+  font-style: normal;
+  color: #BBB;
+  text-align: center;
+  margin-bottom: 20px; }
+
+h3 {
+  font-family: "museo-sans", helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 1.8em;
+  font-weight: 500;
+  font-style: normal;
+  color: #555;
+  margin-top: 20px;
+  margin-left: 1em; }
+
+li {
+  font-family: "museo-sans", helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 1.7em;
+  font-weight: 300;
+  font-style: normal;
+  color: #222;
+  list-style-position: outside;
+  list-style-type: circle;
+  margin-left: 2em; }
+
+header {
+  padding: 80px 0; }
+
+section {
+  width: 100%;
+  padding: 80px 0;
+  border-top: 1px #999 solid; }
+
+nav {
+  width: 150px;
+  margin: 0 auto; }
+  nav li {
+    display: inline;
+    margin-left: 0; }
+  nav li + li {
+    margin-left: 20px; }
+  nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #555; }
+
+.equal {
+  list-style-type: none;
+  margin-top: 5px;
+  border-top: 1px dotted #999; }
+
+li ul {
+  margin: 10px 0; }
+  li ul li {
+    list-style-type: disc;
+    font-size: 13px;
+    color: #555;
+    font-style: italic; }
+
+@media screen and (min-width: 38em) {
+  section {
+    float: left;
+    width: 47.5%;
+    padding-left: 5%; }
+
+  section:nth-of-type(odd) {
+    padding-left: 0; } }
+@media screen and (min-width: 64em) {
+  section {
+    display: block;
+    float: left;
+    width: 32%;
+    padding-left: 2%; }
+
+  section:nth-of-type(odd) {
+    padding-left: 2%; }
+
+  section:nth-of-type(3n+1) {
+    padding-left: 0; } }
+
+/*# sourceMappingURL=style.css.map */
