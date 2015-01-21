@@ -14,6 +14,11 @@ html {
   overflow: hidden;
 }
 
+$dark: #000;
+$mediumlight: #999;
+$medium: #555;
+$light: #BBB;
+
 @mixin div-bg {
 	width: 100%;
 	padding: 80px 0;
@@ -27,7 +32,7 @@ h1 {
 	font-size: 8em;
 	font-weight: 200;
 	font-style: normal;
-	color: #000;
+	color: $dark;
 	text-align: center;
 }
 
@@ -39,7 +44,7 @@ h2 {
 	letter-spacing: 0.1em;
 	font-weight: 200;
 	font-style: normal;
-	color: #BBB;
+	color: $light;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -48,10 +53,10 @@ h2 {
 h3 {
 	font-family: "museo-sans", helvetica, sans-serif;
 	line-height: 1.6;
-	font-size: 1.8em;
+	font-size: 1.6em;
 	font-weight: 500;
 	font-style: normal;
-	color: #555;
+	color: $mediumlight;
 	margin-top: 20px;
 	margin-left: 1em;
 }
@@ -63,7 +68,7 @@ li {
 	font-size: 1.7em;
 	font-weight: 300;
 	font-style: normal;
-	color: #222;
+	color: $dark;
 	list-style-position: outside;
 	list-style-type: circle;
 	margin-left: 2em;
