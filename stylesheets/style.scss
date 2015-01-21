@@ -1,6 +1,12 @@
 @import 'reset';
 @import 'presets';
 
+.container{
+  max-width: 380px;
+  width:85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
 header {
 	padding: 80px 0;
@@ -8,17 +14,22 @@ header {
 
 section {
 	@include div-bg;
-	max-width: 300px;
+	max-width: 333.33px;
 	margin: 0 auto;
+	border-top: 1px solid $medium;
 }
 																																																																																																																																																													
 nav {
-	width: 150px;
+	width: 180px;
 	margin: 0 auto;
+	position: relative;
 
 	li {
-	display: inline;
+	float: left;
+	list-style-type: none;
 	margin-left: 0;
+	position: relative;
+
 	}
 
 	li+li {
@@ -42,6 +53,36 @@ nav	a {
 	}
 }
 
+.months {
+	display: none;
+	position: absolute;
+
+	li {
+		font-size: 12px;
+		float: none;
+		margin-left: 0;
+		margin-top: 5px;
+	}
+
+	li:first-of-type {
+		margin-top: 10px;
+	}
+
+	li:last-of-type {
+		margin-bottom: 10px;
+	}
+
+	a:hover {
+		border-bottom: none;
+		border-top: none;
+		color: $dark;
+	}
+}
+
+.show-nav {
+	display: block;
+}
+
 .equal {
 	list-style-type: none;
 	margin-top: 5px;
@@ -55,23 +96,20 @@ nav	a {
 	color: $medium;
 }
 
-li ul {
-	margin: 10px 0;
-
-	li {
-		list-style-type: disc;
-		font-size: 12px;
-		color: $medium;
-	}
+li ul li {
+font-size: 12px;
 }
-
 
 /*Media Queries*/
 
 @media screen and (min-width: 38em) {
 	
+	.container{
+  	max-width: 640px;
+	}
+
 	section {
-		min-height: 450px;
+		min-height: 650px;
 		float: left;
 		width: 47.5%;
 		padding-left: 5%;
@@ -88,6 +126,10 @@ li ul {
 
 @media screen and (min-width: 64em) {
 	
+	.container{
+  	max-width: 1000px;
+	}
+
 	section {
 		display: block;
 		float: left;

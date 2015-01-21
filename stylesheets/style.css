@@ -52,12 +52,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.container {
-  max-width: 1000px;
-  width: 85%;
-  margin: 0 auto;
-  overflow: hidden; }
-
 /*Typography*/
 h1 {
   font-family: "le-havre-rounded", helvetica, sans-serif;
@@ -101,21 +95,31 @@ li {
   list-style-type: circle;
   margin-left: 2em; }
 
+.container {
+  max-width: 380px;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden; }
+
 header {
   padding: 80px 0; }
 
 section {
   width: 100%;
   padding: 80px 0;
-  max-width: 300px;
-  margin: 0 auto; }
+  max-width: 333.33px;
+  margin: 0 auto;
+  border-top: 1px solid #555; }
 
 nav {
-  width: 150px;
-  margin: 0 auto; }
+  width: 180px;
+  margin: 0 auto;
+  position: relative; }
   nav li {
-    display: inline;
-    margin-left: 0; }
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+    position: relative; }
   nav li + li {
     margin-left: 20px; }
 
@@ -132,6 +136,26 @@ nav a {
     border-top: 1px dotted #000;
     color: #000; }
 
+.months {
+  display: none;
+  position: absolute; }
+  .months li {
+    font-size: 12px;
+    float: none;
+    margin-left: 0;
+    margin-top: 5px; }
+  .months li:first-of-type {
+    margin-top: 10px; }
+  .months li:last-of-type {
+    margin-bottom: 10px; }
+  .months a:hover {
+    border-bottom: none;
+    border-top: none;
+    color: #000; }
+
+.show-nav {
+  display: block; }
+
 .equal {
   list-style-type: none;
   margin-top: 5px;
@@ -143,17 +167,16 @@ nav a {
   font-style: italic;
   color: #555; }
 
-li ul {
-  margin: 10px 0; }
-  li ul li {
-    list-style-type: disc;
-    font-size: 12px;
-    color: #555; }
+li ul li {
+  font-size: 12px; }
 
 /*Media Queries*/
 @media screen and (min-width: 38em) {
+  .container {
+    max-width: 640px; }
+
   section {
-    min-height: 450px;
+    min-height: 650px;
     float: left;
     width: 47.5%;
     padding-left: 5%; }
@@ -164,6 +187,9 @@ li ul {
   .goal {
     min-height: 650px; } }
 @media screen and (min-width: 64em) {
+  .container {
+    max-width: 1000px; }
+
   section {
     display: block;
     float: left;

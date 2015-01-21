@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="//use.typekit.net/dzi5vtz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -15,7 +16,12 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Goals</a></li>
-					<li><a href="monthly-plans.html">Plans</a></li>
+					<li><a href="#">Months</a>
+						<ul class="months"> 
+							<li><a href="january.html">January</a></li>
+							<li><a href="#">February</a></li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -150,5 +156,9 @@
 			</ul>
 		</section>
 	</div>
+	<script>$('nav li').click(function(){
+  	$('nav li ul').toggleClass('show-nav');
+	});
+	</script>
 </body>
 </html>
