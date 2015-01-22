@@ -169,6 +169,9 @@ nav li ul {
 li ul li {
   font-size: 12px; }
 
+.fini {
+  text-decoration: line-through; }
+
 /*Media Queries*/
 @media screen and (min-width: 38em) {
   .container {
