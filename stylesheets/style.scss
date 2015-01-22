@@ -16,7 +16,6 @@ section {
 	@include div-bg;
 	max-width: 333.33px;
 	margin: 0 auto;
-	border-top: 1px solid $medium;
 }
 																																																																																																																																																													
 nav {
@@ -53,7 +52,7 @@ nav	a {
 	}
 }
 
-.months {
+nav li ul {
 	display: none;
 	position: absolute;
 
@@ -109,7 +108,7 @@ font-size: 12px;
 	}
 
 	section {
-		min-height: 650px;
+		min-height: 400px;
 		float: left;
 		width: 47.5%;
 		padding-left: 5%;

@@ -108,8 +108,7 @@ section {
   width: 100%;
   padding: 80px 0;
   max-width: 333.33px;
-  margin: 0 auto;
-  border-top: 1px solid #555; }
+  margin: 0 auto; }
 
 nav {
   width: 180px;
@@ -136,19 +135,19 @@ nav a {
     border-top: 1px dotted #000;
     color: #000; }
 
-.months {
+nav li ul {
   display: none;
   position: absolute; }
-  .months li {
+  nav li ul li {
     font-size: 12px;
     float: none;
     margin-left: 0;
     margin-top: 5px; }
-  .months li:first-of-type {
+  nav li ul li:first-of-type {
     margin-top: 10px; }
-  .months li:last-of-type {
+  nav li ul li:last-of-type {
     margin-bottom: 10px; }
-  .months a:hover {
+  nav li ul a:hover {
     border-bottom: none;
     border-top: none;
     color: #000; }
@@ -176,7 +175,7 @@ li ul li {
     max-width: 640px; }
 
   section {
-    min-height: 650px;
+    min-height: 400px;
     float: left;
     width: 47.5%;
     padding-left: 5%; }
