@@ -17,7 +17,8 @@ section {
 	max-width: 333.33px;
 	margin: 0 auto;
 }
-																																																																																																																																																													
+			
+																											
 nav {
 	width: 180px;
 	margin: 0 auto;
@@ -111,7 +112,6 @@ font-size: 12px;
 	}
 
 	section {
-		min-height: 400px;
 		float: left;
 		width: 47.5%;
 		padding-left: 5%;
@@ -119,6 +119,7 @@ font-size: 12px;
 
 	section:nth-of-type(odd) {
 		padding-left: 0;
+		clear: left;
 	}
 
 	.goal {
@@ -141,9 +142,11 @@ font-size: 12px;
 
 	section:nth-of-type(odd) {
 		padding-left: 2%;
+		clear: none;
 	}
 
 	section:nth-of-type(3n+1) {
 		padding-left:0;
+		clear: left;
 	}
 }

@@ -178,13 +178,13 @@ li ul li {
     max-width: 640px; }
 
   section {
-    min-height: 400px;
     float: left;
     width: 47.5%;
     padding-left: 5%; }
 
   section:nth-of-type(odd) {
-    padding-left: 0; }
+    padding-left: 0;
+    clear: left; }
 
   .goal {
     min-height: 650px; } }
@@ -199,9 +199,11 @@ li ul li {
     padding-left: 2%; }
 
   section:nth-of-type(odd) {
-    padding-left: 2%; }
+    padding-left: 2%;
+    clear: none; }
 
   section:nth-of-type(3n+1) {
-    padding-left: 0; } }
+    padding-left: 0;
+    clear: left; } }
 
 /*# sourceMappingURL=style.css.map */
