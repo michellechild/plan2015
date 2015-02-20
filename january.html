@@ -9,6 +9,7 @@
 	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+	<div class="container">
 	<header>
 		<h1>January 2015</h1>
 		<nav>
@@ -71,4 +72,10 @@
 			<li>Worked on Portfolio.</li>
 		</ul>
 	</section>
-	
+	</div>
+	<script>$('nav li').click(function(){
+  	$('nav li ul').toggleClass('show-nav');
+	});
+	</script>
+</body>
+</html>
