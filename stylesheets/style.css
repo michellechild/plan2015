@@ -52,12 +52,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.container {
-  max-width: 1000px;
-  width: 85%;
-  margin: 0 auto;
-  overflow: hidden; }
-
 /*Typography*/
 h1 {
   font-family: "le-havre-rounded", helvetica, sans-serif;
@@ -83,10 +77,10 @@ h2 {
 h3 {
   font-family: "museo-sans", helvetica, sans-serif;
   line-height: 1.6;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 500;
   font-style: normal;
-  color: #555;
+  color: #999;
   margin-top: 20px;
   margin-left: 1em; }
 
@@ -96,10 +90,16 @@ li {
   font-size: 1.7em;
   font-weight: 300;
   font-style: normal;
-  color: #222;
+  color: #000;
   list-style-position: outside;
   list-style-type: circle;
   margin-left: 2em; }
+
+.container {
+  max-width: 380px;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden; }
 
 header {
   padding: 80px 0; }
@@ -107,45 +107,91 @@ header {
 section {
   width: 100%;
   padding: 80px 0;
-  border-top: 1px #999 solid; }
+  max-width: 333.33px;
+  margin: 0 auto; }
 
 nav {
-  width: 150px;
-  margin: 0 auto; }
+  width: 180px;
+  margin: 0 auto;
+  position: relative; }
   nav li {
-    display: inline;
-    margin-left: 0; }
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+    position: relative; }
   nav li + li {
     margin-left: 20px; }
-  nav a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: #555; }
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #555;
+  transition: 200ms ease color, 200ms ease border;
+  padding: 3px 0; }
+  nav a:hover {
+    border-bottom: 1px dotted #000;
+    border-top: 1px dotted #000;
+    color: #000; }
+
+nav li ul {
+  display: none;
+  position: absolute; }
+  nav li ul li {
+    font-size: 12px;
+    float: none;
+    margin-left: 0;
+    margin-top: 5px; }
+  nav li ul li:first-of-type {
+    margin-top: 10px; }
+  nav li ul li:last-of-type {
+    margin-bottom: 10px; }
+  nav li ul a:hover {
+    border-bottom: none;
+    border-top: none;
+    color: #000; }
+
+.show-nav {
+  display: block; }
 
 .equal {
   list-style-type: none;
   margin-top: 5px;
-  border-top: 1px dotted #999; }
+  border-top: 1px dotted #999;
+  width: 200px; }
 
-li ul {
-  margin: 10px 0; }
-  li ul li {
-    list-style-type: disc;
-    font-size: 13px;
-    color: #555;
-    font-style: italic; }
+.ideas li {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #555; }
 
+li ul li {
+  font-size: 12px; }
+
+.fini {
+  text-decoration: line-through; }
+
+/*Media Queries*/
 @media screen and (min-width: 38em) {
+  .container {
+    max-width: 640px; }
+
   section {
     float: left;
     width: 47.5%;
     padding-left: 5%; }
 
   section:nth-of-type(odd) {
-    padding-left: 0; } }
+    padding-left: 0;
+    clear: left; }
+
+  .goal {
+    min-height: 650px; } }
 @media screen and (min-width: 64em) {
+  .container {
+    max-width: 1000px; }
+
   section {
     display: block;
     float: left;
@@ -153,9 +199,11 @@ li ul {
     padding-left: 2%; }
 
   section:nth-of-type(odd) {
-    padding-left: 2%; }
+    padding-left: 2%;
+    clear: none; }
 
   section:nth-of-type(3n+1) {
-    padding-left: 0; } }
+    padding-left: 0;
+    clear: left; } }
 
 /*# sourceMappingURL=style.css.map */
